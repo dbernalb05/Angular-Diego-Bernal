@@ -1,0 +1,12 @@
+<div *ngFor = "let product of productList">
+     <h2>{{product.name}}</h2>
+     <p>{{product.description}}</p>
+     <p>{{product.price}}</p>
+     <button (click)="addToCart(product)">Add to cart</button>
+</div>
+
+<div>
+    <input type="number" [(ngModel)]="productId" placeholder="Enter product id">
+    <button (click)="getProductById()">Search</button>
+</div>
+
